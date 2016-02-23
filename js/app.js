@@ -5,9 +5,10 @@ $(document).ready(function(){
     $('.results').html('');
     if($(".usersearch").val() !== ""){
       var searchterm = $(".usersearch").val();
-      var tags = capitalizeEachWord(searchterm);
-      wikipedia(tags);
-      $(".searchterm").text(tags);
+
+      // var tags = capitalizeEachWord(searchterm);
+      wikipedia(searchterm);
+      $(".searchterm").text(searchterm);
       flickr(searchterm);
     }
     });
@@ -16,9 +17,9 @@ $(document).ready(function(){
       $('.results').html('');
       if($(".usersearch").val() !== ""){
         var searchterm = $(".usersearch").val();
-        var tags = capitalizeEachWord(searchterm);
-        wikipedia(tags);
-        $(".searchterm").text(tags);
+        // var tags = capitalizeEachWord(searchterm);
+        wikipedia(searchterm);
+        $(".searchterm").text(searchterm);
         flickr(searchterm);
       }
   });
@@ -55,7 +56,12 @@ function wikipedia(tags){
 		success: function(data){
 			console.log(data);
       $.each(data.query.pages, function(pageid, value){
-        $(".wikipediamedia").text(value.extract);
+        if(pageid < 0 || value.extract.indexOf("This is a redirect") == 0){
+          $(".wikipediamedia").text("No results found, please check capitalization.");
+        }
+        else { 
+          $(".wikipediamedia").text(value.extract);
+        }
       });
 		}
 	});
