@@ -1,0 +1,108 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+html, body{
+    background-color: white;
+    color:#444444;
+		padding: 0px;
+		margin: 0px;
+		font-family: 'Lato', sans-serif;
+}
+.navbar{
+	background-color: #b3daff;
+	padding: .70rem;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	/*z-index: 9999;*/
+}
+
+.header{
+  font-size: 1.5rem;
+	display: inline-block;
+	text-align: left;
+	margin-right: 1.5rem;
+	margin-left: 1rem;
+	color: white;
+}
+
+.header a {
+	text-decoration: none;
+	color: white;
+}
+
+.searchbox{
+  display: inline-block;
+  text-align: center;
+}
+
+.usersearch{
+	font-size: 1rem;
+	height: 2.5rem;
+	width: 30rem;
+	background-color: white;
+	color: #444444;
+}
+
+#search{
+	/*background-color: blue;*/
+	height:2.5rem;
+	line-height: 2.5;
+	width: 5rem;
+	/*padding: 3rem auto;*/
+	text-align: center;
+	font-size: 1rem;
+	display:inline-block;
+	font-weight: 700;
+}
+
+#search:hover{
+	cursor: pointer;
+	color: #9494b8;
+}
+
+
+.container{
+	width: 70%;
+  margin: 0 auto;
+}
+
+.wikipediaheader,
+.flickrheader{
+	font-size: 3rem;
+	text-align: center;
+
+}
+
+.wikipediaheader{
+	margin-bottom: 1rem;
+}
+
+.flickrheader{
+	margin-bottom: .50rem;
+}
+
+
+.wikipediabox{
+	margin-top: 5rem;
+}
+
+.hidden{
+	display: none;
+}
+
+.user{
+  list-style-type: none;
+	display: inline-block;
+	margin-left: -2rem;
+}
+.flickrphoto img{
+  display: inline-block;
+	padding-bottom: 1rem;
+	padding-right: 1rem;
+}
